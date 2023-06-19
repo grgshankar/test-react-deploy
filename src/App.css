@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 1366px;
+  width: 80%;
+  margin: 0 auto;
+}
+.navWrapper {
+  background-color: #099;
+  padding: 15px 0px;
+  margin-bottom: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navWrapper .menu_wrapper {
+  display: grid;
+  grid-template-columns: fit-content(200px) 1fr;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navWrapper .menu_wrapper .RightSide {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.navWrapper .menu_wrapper .RightSide a {
+  display: inline-block;
+  margin-right: 15px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+.navWrapper .menu_wrapper .RightSide a:last-child {
+  margin-right: 0px;
+}
+.navWrapper .menu_wrapper .leftSide h3 {
+  font-size: 30px;
+  color: #fff;
+  letter-spacing: 1px;
 }
 
-.App-link {
-  color: #61dafb;
+.formWrapper h1 {
+  font-size: 35px;
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.formWrapper form {
+  width: 400px;
+}
+.formWrapper form input {
+  width: 100%;
+  padding: 15px 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+.formWrapper form input:focus {
+  outline: none;
+}
+.formWrapper form button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 15px 35px;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.listCourse {
+  background: #fff;
+  box-shadow: 0px 0px 10px #ccc;
+  padding: 20px;
+  border-radius: 10px;
+}
+.listRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+.listCourse strong {
+  display: block;
+  font-size: 30px;
+}
+.listCourse span {
+  display: block;
+  margin: 10px 0px;
+  margin-top: 0px;
+}
+.listCourse button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  background: #bf4848;
+  color: #fff;
+}
+.courseListWrapper h1 {
+  display: block;
+  margin: 15px 0px;
+  margin-top: 30px;
 }
