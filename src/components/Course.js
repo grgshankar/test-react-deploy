@@ -50,7 +50,7 @@ const Course = () => {
                   some data !!!
                 </p>
                 <button className="btn_ btn_back">
-                  <Link to="/addCourse">Back</Link>
+                  <Link to="/addCourse">Add Data</Link>
                 </button>
               </div>
             </div>
