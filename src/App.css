@@ -49,16 +49,21 @@
 .formWrapper form {
   width: 400px;
 }
-.formWrapper form input {
+.formWrapper form input,
+.formWrapper form textarea {
   width: 100%;
   padding: 15px 10px;
   border: 1px solid #ccc;
   margin-bottom: 15px;
 }
-.formWrapper form input:focus {
+.formWrapper form input:focus,
+.formWrapper form textarea:focus {
   outline: none;
 }
-.formWrapper form button {
+.formWrapper form textarea {
+  height: 200px;
+}
+.formWrapper .btn_submit {
   background: #000;
   color: #fff;
   border: none;
@@ -87,15 +92,114 @@
   margin: 10px 0px;
   margin-top: 0px;
 }
-.listCourse button {
+.btn_ {
   border: none;
   padding: 10px 20px;
   border-radius: 6px;
   background: #bf4848;
   color: #fff;
 }
+.btn_ a {
+  color: #fff;
+}
+.listCourse button.btn_.view_ {
+  background-color: #3c8a3c;
+  margin-right: 10px;
+  cursor: pointer;
+}
 .courseListWrapper h1 {
   display: block;
-  margin: 15px 0px;
   margin-top: 30px;
+  margin-bottom: 0px;
+}
+.no_data_container p {
+  font-size: 20px;
+}
+.btn_.btn_back {
+  padding: 0px;
+  background: #63a8c4;
+  text-decoration: none;
+  margin: 10px 0px;
+}
+.courseListWrapper .btn_.btn_back {
+  margin-bottom: 30px;
+}
+.btn_.btn_back a {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+}
+.single_page .content_wrap {
+  margin-top: 20px;
+}
+.formWrapper .rating_wrapper {
+  margin-bottom: 10px;
+}
+.rating_wrapper .star {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 19px;
+  margin: 0px;
+  margin-right: 10px;
+  padding: 0px;
+}
+.rating_wrapper .star.active {
+  color: #099;
+}
+
+.listCourse .title_wrapper {
+  position: relative;
+}
+.listCourse .title_wrapper .rating_wrapper {
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+.listCourse .title_wrapper .rating_wrapper button.star {
+  font-size: 16px;
+  padding: 0px;
+  margin-right: 4px;
+}
+.listCourse .title_wrapper .rating_wrapper button.star:last-child {
+  margin-right: 0px;
+}
+.listCourse .content_wrap {
+  margin-bottom: 10px;
+}
+
+.name_ {
+  display: block;
+  margin: 10px 0px;
+  color: #206f6f;
+  font-size: 17px;
+}
+
+.no_data_container {
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  height: calc(100vh - 83px);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.no_data_container p {
+  font-size: 30px;
+}
+.no_data_container .btn_.btn_back {
+  padding: 10px 30px;
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+}
+.single_page .rating_wrapper .star {
+  margin-right: 6px;
+}
+.single_page .rating_wrapper .star:last-child {
+  margin-right: 0px;
+}
+.single_page .rating_wrapper {
+  margin-bottom: 10px;
 }

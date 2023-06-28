@@ -1,40 +1,58 @@
-import React, { useEffect, useRef, useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import React, { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Rating from "./Rating";
 
 const CourseForm = () => {
-  //   console.log("props=", props);
   const getCourse = useRef();
   const getAuthor = useRef();
-  useEffect(() => {
-    const initialData = JSON.parse(localStorage.getItem("courseList"));
-    console.log(initialData);
-  }, []);
-  //   const [course, setCourse] = useState(initialData ? initialData : []);
-  //   const navigate = useNavigate();
+  const getMessage = useRef();
+  const [rating, setRating] = useState(0);
+  const [ratingHover, setRatingHover] = useState(0);
+  const initialData = localStorage.getItem("courseList");
+  const finalData = initialData ? JSON.parse(initialData) : [];
+  const navigate = useNavigate();
 
   const courseHandlers = (e) => {
     e.preventDefault();
     const course = getCourse.current.value;
     const author = getAuthor.current.value;
+    const message = getMessage.current.value;
     const dataStore = {
+      id: Math.random(),
       course,
       author,
+      message,
+      rating,
     };
-    console.log("data", dataStore);
-    // addedLatestData(dataStore);
-    // navigate("/course");
-    localStorage.setItem("courseList", JSON.stringify(dataStore));
+    navigate("/");
+    const addedData = [dataStore, ...finalData];
+    localStorage.setItem("courseList", JSON.stringify(addedData));
   };
   return (
     <>
       <div className="formWrapper">
         <div className="container">
           <h1>Please add your course here!!!</h1>
-          <form onSubmit={courseHandlers}>
+          <div className="rating_wrapper">
+            <Rating
+              rating={rating}
+              setRating={setRating}
+              ratingHover={ratingHover}
+              setRatingHover={setRatingHover}
+            />
+          </div>
+          <form>
             <input type="text" placeholder="Course Name" ref={getCourse} />
             <input type="text" placeholder="Author" ref={getAuthor} />
-            <button>Add</button>
+            <textarea
+              type="text"
+              placeholder="Message"
+              ref={getMessage}
+            ></textarea>
           </form>
+          <button className="btn_ btn_submit" onClick={courseHandlers}>
+            Add
+          </button>
         </div>
       </div>
     </>
