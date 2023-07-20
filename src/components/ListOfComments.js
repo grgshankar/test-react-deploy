@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const CourseComponent = (props) => {
+const ListOfComments = (props) => {
   //retreiving rating
   const ratingHtml = (ratingNumber) => {
     const ratingWrapperHtml = [];
@@ -25,12 +25,12 @@ const CourseComponent = (props) => {
   };
   return (
     <>
-      <div className="listCourse">
+      <div className="listComment">
         <div className="title_wrapper">
-          <strong>{props.data.course}</strong>
+          <strong>{props.data.name}</strong>
           <div className="rating_wrapper">{ratingHtml(props.data.rating)}</div>
         </div>
-        <span className="name_">{props.data.author}</span>
+        <span className="name_">{props.data.desingation}</span>
         <div className="content_wrap">
           <p>{trimMessage(props.data.message)}</p>
         </div>
@@ -48,4 +48,4 @@ const CourseComponent = (props) => {
   );
 };
 
-export default CourseComponent;
+export default ListOfComments;

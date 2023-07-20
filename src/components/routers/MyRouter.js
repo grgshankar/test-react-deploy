@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Course from "../Course";
-import AddCourse from "../AddCourse";
+import Home from "../Home";
+import AddComment from "../AddComment";
 import NotFound from "../NotFound";
 import SingleCourse from "../SingleCourse";
 
@@ -10,8 +10,8 @@ const MyRouter = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Course />} />
-          <Route path="/addCourse" element={<AddCourse />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/addComment" element={<AddComment />} />
           <Route path="/views/:id" element={<SingleCourse />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

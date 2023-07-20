@@ -1,20 +1,19 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../Header";
-import CourseComponent from "./CourseComponent";
+import ListOfComments from "./ListOfComments";
 
-const Course = () => {
+const Home = () => {
   const [finalData, setFinalData] = useState(() => {
-    const initialData = localStorage.getItem("courseList");
+    const initialData = localStorage.getItem("commentList");
     return initialData ? JSON.parse(initialData) : [];
   });
 
   const removeDataHandler = (id) => {
     //
-    // console.log("id", id);
     const updatedData = finalData.filter((item) => item.id !== id);
     setFinalData(updatedData);
-    localStorage.setItem("courseList", JSON.stringify(updatedData));
+    localStorage.setItem("commentList", JSON.stringify(updatedData));
   };
 
   return (
@@ -22,15 +21,15 @@ const Course = () => {
       <Header />
       {finalData.length > 0 ? (
         <>
-          <div className="courseListWrapper">
+          <div className="commentListWrapper">
             <div className="container">
               <h1>Courses</h1>
               <button className="btn_ btn_back">
-                <Link to="/addCourse">Back</Link>
+                <Link to="/addComment">Back</Link>
               </button>
               <div className="listRow">
                 {finalData.map((data) => (
-                  <CourseComponent
+                  <ListOfComments
                     key={Math.random()}
                     data={data}
                     removeData={removeDataHandler}
@@ -46,11 +45,10 @@ const Course = () => {
             <div className="no_data_container">
               <div className="inner_content">
                 <p>
-                  There is no any other data!!! <br></br>Please go back to add
-                  some data !!!
+                  There is no any testimonials!!! <br></br>
                 </p>
                 <button className="btn_ btn_back">
-                  <Link to="/addCourse">Add Data</Link>
+                  <Link to="/addComment">Add Testimonials</Link>
                 </button>
               </div>
             </div>
@@ -61,4 +59,4 @@ const Course = () => {
   );
 };
 
-export default Course;
+export default Home;
