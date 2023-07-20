@@ -23,7 +23,7 @@ const Home = () => {
         <>
           <div className="commentListWrapper">
             <div className="container">
-              <h1>Courses</h1>
+              <h1>Testimonials</h1>
               <button className="btn_ btn_back">
                 <Link to="/addComment">Back</Link>
               </button>
