@@ -78,11 +78,11 @@
   padding: 20px;
   border-radius: 10px;
 }
-.listRow {
+/* .listRow {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-}
+} */
 .listComment strong {
   display: block;
   font-size: 30px;
@@ -103,21 +103,20 @@
   color: #fff;
 }
 .listComment button.btn_.view_ {
-  background-color: #3c8a3c;
+  background-color: #359e9e;
   margin-right: 10px;
   cursor: pointer;
 }
 .commentListWrapper h1 {
   display: block;
-  margin-top: 30px;
-  margin-bottom: 0px;
+  margin-bottom: 30px;
 }
 .no_data_container p {
   font-size: 20px;
 }
 .btn_.btn_back {
   padding: 0px;
-  background: #63a8c4;
+  background: #373737;
   text-decoration: none;
   margin: 10px 0px;
 }
@@ -202,4 +201,16 @@ a {
 }
 .single_page .rating_wrapper {
   margin-bottom: 10px;
+}
+
+.listRow .listComment:nth-child(odd) {
+  margin-right: 14rem;
+}
+
+.listRow .listComment:nth-child(even) {
+  margin-left: 14rem;
+}
+
+.listRow .listComment {
+  margin-bottom: 30px;
 }

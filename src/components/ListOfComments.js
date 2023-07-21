@@ -16,7 +16,7 @@ const ListOfComments = (props) => {
   };
 
   // function for trimming the description
-  const maxLength = 100; //maximum length for the trimmed message
+  const maxLength = 200; //maximum length for the trimmed message
   const trimMessage = (message) => {
     if (message.length > maxLength) {
       return message.slice(0, maxLength) + "..."; // trim the message
@@ -28,6 +28,7 @@ const ListOfComments = (props) => {
       <div className="listComment">
         <div className="title_wrapper">
           <strong>{props.data.name}</strong>
+          <span>{props.data.desingation}</span>
           <div className="rating_wrapper">{ratingHtml(props.data.rating)}</div>
         </div>
         <span className="name_">{props.data.desingation}</span>

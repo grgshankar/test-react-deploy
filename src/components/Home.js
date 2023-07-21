@@ -14,6 +14,7 @@ const Home = () => {
     const updatedData = finalData.filter((item) => item.id !== id);
     setFinalData(updatedData);
     localStorage.setItem("commentList", JSON.stringify(updatedData));
+    console.log("click-id==", id);
   };
 
   return (
@@ -23,10 +24,10 @@ const Home = () => {
         <>
           <div className="commentListWrapper">
             <div className="container">
-              <h1>Testimonials</h1>
               <button className="btn_ btn_back">
                 <Link to="/addComment">Back</Link>
               </button>
+              <h1>Testimonials</h1>
               <div className="listRow">
                 {finalData.map((data) => (
                   <ListOfComments
