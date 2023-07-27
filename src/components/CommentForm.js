@@ -32,31 +32,33 @@ const CommentForm = () => {
     <>
       <div className="formWrapper">
         <div className="container">
-          <h1>Please add your comments here!!!</h1>
-          <div className="rating_wrapper">
-            <Rating
-              rating={rating}
-              setRating={setRating}
-              ratingHover={ratingHover}
-              setRatingHover={setRatingHover}
-            />
+          <div className="innerFormWrapper">
+            <h1>Please add your comments here!!!</h1>
+            <div className="rating_wrapper">
+              <Rating
+                rating={rating}
+                setRating={setRating}
+                ratingHover={ratingHover}
+                setRatingHover={setRatingHover}
+              />
+            </div>
+            <form>
+              <input type="text" placeholder="Name" ref={getName} />
+              <input
+                type="text"
+                placeholder="Designation"
+                ref={getDesignations}
+              />
+              <textarea
+                type="text"
+                placeholder="Message"
+                ref={getMessage}
+              ></textarea>
+            </form>
+            <button className="btn_ btn_submit" onClick={commentsHandlers}>
+              Add
+            </button>
           </div>
-          <form>
-            <input type="text" placeholder="Name" ref={getName} />
-            <input
-              type="text"
-              placeholder="Designation"
-              ref={getDesignations}
-            />
-            <textarea
-              type="text"
-              placeholder="Message"
-              ref={getMessage}
-            ></textarea>
-          </form>
-          <button className="btn_ btn_submit" onClick={commentsHandlers}>
-            Add
-          </button>
         </div>
       </div>
     </>

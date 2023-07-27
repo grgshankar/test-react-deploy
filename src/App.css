@@ -39,15 +39,25 @@
   color: #fff;
   letter-spacing: 1px;
 }
-
+.formWrapper {
+  height: calc(100vh - 64px);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.innerFormWrapper {
+  max-width: 571px;
+  width: 100%;
+  box-shadow: 0px 0px 10px #ccc;
+  padding: 30px;
+  border-radius: 22px;
+  margin: 0 auto;
+  background: #fff;
+}
 .formWrapper h1 {
   font-size: 35px;
   display: block;
-  margin-top: 30px;
-  margin-bottom: 15px;
-}
-.formWrapper form {
-  width: 400px;
 }
 .formWrapper form input,
 .formWrapper form textarea {
@@ -74,7 +84,7 @@
 
 .listComment {
   background: #fff;
-  box-shadow: 0px 0px 10px #ccc;
+  box-shadow: 0px 0px 10px #e5e5e5;
   padding: 20px;
   border-radius: 10px;
 }
@@ -132,13 +142,14 @@
   margin-top: 20px;
 }
 .formWrapper .rating_wrapper {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 8px;
 }
 .rating_wrapper .star {
   background: none;
   border: none;
   color: #000;
-  font-size: 19px;
+  font-size: 30px;
   margin: 0px;
   margin-right: 10px;
   padding: 0px;
@@ -172,6 +183,15 @@
   margin: 10px 0px;
   color: #206f6f;
   font-size: 17px;
+}
+span.name_ {
+  display: inline-block;
+  background: #ddf9f9;
+  padding: 6px 12px;
+  color: #000;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-top: 5px;
 }
 
 .no_data_container {

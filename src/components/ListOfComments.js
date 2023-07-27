@@ -28,10 +28,9 @@ const ListOfComments = (props) => {
       <div className="listComment">
         <div className="title_wrapper">
           <strong>{props.data.name}</strong>
-          <span>{props.data.desingation}</span>
           <div className="rating_wrapper">{ratingHtml(props.data.rating)}</div>
         </div>
-        <span className="name_">{props.data.desingation}</span>
+        <span className="name_">{props.data.designation}</span>
         <div className="content_wrap">
           <p>{trimMessage(props.data.message)}</p>
         </div>
